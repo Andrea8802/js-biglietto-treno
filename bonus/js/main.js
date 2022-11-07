@@ -28,11 +28,14 @@ if(etaPasseggero < 18){
     sconto = 40
 }
 
-// Output del prezzo finale (massimo 2 decimali)
+// Se hai un età minore ai 18 anni OPPURE maggiore o uguale ai 65 anni, hai diritto ad uno sconto
 if(etaPasseggero < 18 || etaPasseggero >= 65){
     document.getElementById("sconto").innerHTML = "HAI OTTENUTO UNO SCONTO DEL " + sconto + "%!"
+} else{ // Altrimenti non hai diritto allo sconto
+    document.getElementById("sconto").innerHTML = "NON HAI DIRITTO ALLO SCONTO!"
 }
 
+// Output del prezzo finale (massimo 2 decimali)
 document.getElementById("kmViaggio").innerHTML = kmViaggio + "km";
 document.getElementById("etaPasseggero").innerHTML = etaPasseggero + " anni";
 document.getElementById("prezzoAlKm").innerHTML = prezzoAlKm + "€";
