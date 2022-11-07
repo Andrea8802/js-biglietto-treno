@@ -29,7 +29,10 @@ if(etaPasseggero < 18){
 }
 
 // Output del prezzo finale (massimo 2 decimali)
-document.getElementById("sconto").innerHTML =  sconto + "%!"
+if(etaPasseggero < 18 || etaPasseggero >= 65){
+    document.getElementById("sconto").innerHTML = "HAI OTTENUTO UNO SCONTO DEL " + sconto + "%!"
+}
+
 document.getElementById("kmViaggio").innerHTML = kmViaggio + "km";
 document.getElementById("etaPasseggero").innerHTML = etaPasseggero + " anni";
 document.getElementById("prezzoAlKm").innerHTML = prezzoAlKm + "€";

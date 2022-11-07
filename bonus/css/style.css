@@ -22,7 +22,7 @@ body{
     border: 5px solid black;
     border-radius: 20px;
     font-size: 40px;
-    padding: 20px 0;
+    padding: 40px 0 20px;
 }
 
 .text > span{
@@ -34,11 +34,24 @@ body{
 
 .text-sconto{
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .text-sconto > span{
     color: red;
     font-weight: bold;
-    margin-top: 20px;
     display: inline-block;
+    animation: sconto 1s linear infinite;
+}
+
+@keyframes sconto{
+    0% {
+         font-size: 40px;
+    }
+    50%{
+        font-size: 42px;
+    }
+    100%{
+        font-size: 40px;
+    }
 }
