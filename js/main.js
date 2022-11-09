@@ -5,6 +5,7 @@ let kmViaggio
 let etaPasseggero
 const prezzoAlKm = 0.21
 let prezzoViaggio
+let sconto
 
 // Chiedere quanti km vuole percorrere
 kmViaggio = prompt("Quanti km vuoi percorrere?");
@@ -19,10 +20,12 @@ prezzoViaggio = prezzoAlKm * kmViaggio;
 
 // Se è minorenne sconto del 20%
 if(etaPasseggero < 18){
-    prezzoViaggio *= 0.20;
+    sconto = prezzoViaggio * 0.20;
+    prezzoViaggio -= sconto;
 
 } else if (etaPasseggero >= 65){// Altrimenti se è over65 sconto del 40%
-    prezzoViaggio *= 0.40;
+    sconto = prezzoViaggio * 0.40;
+    prezzoViaggio -= sconto;
 }
 
 // Output del prezzo finale (massimo 2 decimali)
